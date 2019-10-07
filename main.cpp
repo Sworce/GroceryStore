@@ -1,3 +1,4 @@
+//Author: Tommy Luo
 #include<iostream>
 #include<string>
 using namespace std;
@@ -8,12 +9,34 @@ int main()
   int numItems = 0;
   char input;
 
-  cout<<"\n==GROCERY LIST MANAGER==";
-  cout<<"\nEnter your choice: ";
-  cout<<"\n (A)dd an item";
-  cout<<"\n (Q)uit";
-  cout<<"\nYour choice (A/Q): ";
-  cin>>input;
+  do {
+
+    cout<<"\n==GROCERY LIST MANAGER==";
+    cout<<"\nEnter your choice: ";
+    cout<<"\n (A)dd an item";
+    cout<<"\n (Q)uit";
+    cout<<"\nYour choice (A/Q): ";
+    cin>>input;
+
+    if(input == 'A' || input == 'a') {
+       string itemName;
+       cout << "What is the item? ";
+       cin >> itemName;
+       cout << itemName << endl;
+       
+       if(numItems < 5) {
+           list[numItems] = itemName;
+       }
+       else {
+         cout <<"You'll need a bigger list!" << endl;
+        }
+      
+    }
+    numItems++;
+
+    cout << numItems << endl;
+  }while(!(input == 'Q' || input == 'q'));
+  
 
   return 0;
 }
