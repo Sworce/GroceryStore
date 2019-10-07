@@ -20,7 +20,7 @@ int main()
 
     if(input == 'A' || input == 'a') {
        string itemName;
-       cout << "What is the item? ";
+       cout << "What is the item?";
        cin >> itemName;
        
        if(numItems < 5) {
