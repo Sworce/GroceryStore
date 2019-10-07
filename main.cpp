@@ -22,7 +22,6 @@ int main()
        string itemName;
        cout << "What is the item? ";
        cin >> itemName;
-       cout << itemName << endl;
        
        if(numItems < 5) {
            list[numItems] = itemName;
