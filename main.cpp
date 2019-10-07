@@ -29,12 +29,10 @@ int main()
        }
        else {
          cout <<"You'll need a bigger list!" << endl;
-        }
-      
+        }      
     }
     numItems++;
 
-    cout << numItems << endl;
   }while(!(input == 'Q' || input == 'q'));
   
 
